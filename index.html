@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="cmp-container">
+    <div class="mytext">
+      <div class="text1"></div>
+      <div class="image"></div>
+    </div>
+
+        <div class="mytext">
+      <div class="text1"></div>
+      <div class="image"></div>
+    </div>
+        <div class="mytext">
+      <div class="text1"></div>
+      <div class="image"></div>
+    </div>
+        <div class="mytext">
+      <div class="text1"></div>
+      <div class="image"></div>
+    </div>
+        <div class="mytext">
+      <div class="text1"></div>
+      <div class="image"></div>
+    </div>
+        <div class="myanotherteaser">
+      <div class="text1"></div>
+      <div class="image"></div>
+    </div>
+  </div>
+
+
+</body>
+<script>
+function createTeasePagination(containerName, teaseName, teasesPerPage) {
+  const containers = document.querySelectorAll(containerName);
+
+  containers.forEach((container) => {
+    const teases =  document.querySelectorAll(".cmp-container--pagination-teaser > *");
+    const totalPages = Math.ceil(teases.length / teasesPerPage);
+    let currentPage = 1;
+    const pagination = document.createElement('div');
+    pagination.classList.add('pagination');
+
+    const prevButton = document.createElement('button');
+    prevButton.textContent = '';
+    prevButton.classList.add("prevButton");
+    prevButton.disabled = true;
+    pagination.appendChild(prevButton);
+
+    for (let i = 1; i <= totalPages; i++) {
+      const button = document.createElement('button');
+      button.classList.add("pagenumber")
+      button.textContent = i;
+      if (i === currentPage) {
+        button.classList.add("active");
+      }
+      pagination.appendChild(button);
+    }
+
+    const nextButton = document.createElement('button');
+    nextButton.classList.add("nextButton");
+    nextButton.textContent = '';
+    if (totalPages === 1) {
+      nextButton.disabled = true;
+    }
+    pagination.appendChild(nextButton);
+
+    container.appendChild(pagination);
+    const buttons = pagination.querySelectorAll('button');
+    let index = 0;
+
+    function showTeases(start, end) {
+      teases.forEach((tease, teaseIndex) => {
+        if (teaseIndex >= start && teaseIndex < end) {
+          tease.style.display = 'block';
+        } else {
+          tease.style.display = 'none';
+        }
+      });
+    }
+
+    showTeases(0, teasesPerPage);
+
+    buttons.forEach((button, buttonIndex) => {
+      button.addEventListener('click', () => {
+        if (buttonIndex === 0) {
+          currentPage--;
+        } else if (buttonIndex === totalPages + 1) {
+          currentPage++;
+        } else {
+          currentPage = buttonIndex;
+        }
+
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+        });
+        buttons[currentPage].classList.add("active");
+
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === totalPages;
+
+        const start = (currentPage - 1) * teasesPerPage;
+        const end = start + teasesPerPage;
+        showTeases(start, end);
+      });
+    });
+  });
+}
+
+createTeasePagination('.cmp-container--pagination-teaser', '.cmp-teaser', 2);
+
+
+
+
+
+
+
+var children =   document.querySelectorAll(".cmp-container > *");
+console.dir(children);
+</script>
+</html>

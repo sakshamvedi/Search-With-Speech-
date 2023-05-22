@@ -1,0 +1,261 @@
+.main-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ultratech-colorwheel-main-container {
+        position: relative;
+        top: 150px;
+        left: -190px;
+        margin-bottom: 100px;
+        @media only screen and (max-width: 600px) {
+            left: -132px;
+        }
+        .color1 {
+            @media only screen and (max-width: 600px) {
+                .color-image {
+                    height: 80px;
+                }
+                .color-arrow {
+                    height: 50px;
+                }
+                .arrow1 {
+                    top: 43px;
+                    left: 80px;
+                }
+            }
+        }
+        .content1 {
+            position: absolute;
+            left: 164px;
+            top: 100px;
+            width: 200px;
+            display: none;
+@media only screen and (max-width: 600px) {
+    left: 106px;
+top: 105px;
+width: 200px;
+font-size: 18px;
+}
+
+            &.active {
+                display: block;
+            }
+        }
+
+        .arrow1 {
+            visibility: hidden;
+            position: absolute;
+            top: 70px;
+            left: 110px;
+            transform: rotate(-60deg);
+
+            &.active {
+                visibility: visible;
+            }
+        }
+        .color2 {
+            position: absolute;
+            top: -100px;
+            left: 60px;
+            stroke: #0000;
+            @media only screen and (max-width: 600px) {
+                position: absolute;
+                top: -65px;
+                left: 38px;
+                stroke: rgba(0, 0, 0, 0);
+
+                .color-image {
+                    height: 80px;
+                }
+                .color-arrow {
+                    height: 50px;
+                }
+            }
+            .content2 {
+                position: absolute;
+                left: 107px;
+                top: 200px;
+                display: none;
+                width: 200px;
+                &.active {
+                    display: block;
+                }
+                @media only screen and (max-width: 600px) {
+  left: 96px;
+top: 180px;
+font-size: 18px;
+}
+            }
+            .arrow2 {
+                visibility: hidden;
+                position: absolute;
+                top: 100px;
+                left: 100px;
+                transform: rotate(-45deg);
+                &.active {
+                    visibility: visible;
+                }
+                @media only screen and (max-width: 600px) {
+                    top: 61px;
+                    left: 77px;
+                    transform: rotate(-39deg);
+                }
+            }
+        }
+        .color3 {
+            position: absolute;
+            top: -120px;
+            left: 200px;
+            @media only screen and (max-width: 600px) {
+                .color-image {
+                    height: 52px;
+                }
+                .color-arrow {
+                    height: 50px;
+                }
+                position: absolute;
+                top: -77px;
+                left: 132px;
+            }
+            .content3 {
+                position: absolute;
+                left: -30px;
+                top: 220px;
+                width: 200px;
+                display: none;
+                &.active {
+                    display: block;
+                }
+                @media only screen and (max-width: 600px) {
+     left: -8px;
+top: 191px;
+width: 200px;
+font-size: 18px;
+}
+            }
+            .arrow3 {
+                position: absolute;
+                left: 44px;
+                visibility: hidden;
+                &.active {
+                    visibility: visible;
+                }
+                @media only screen and (max-width: 600px) {
+                    top: 61px;
+                    left: 33px;
+                }
+            }
+        }
+        .color4 {
+            position: absolute;
+            top: -100px;
+            left: 330px;
+            @media only screen and (max-width: 600px) {
+                .color-image {
+                    height: 80px;
+                }
+                .color-arrow {
+                    height: 50px;
+                }
+                position: absolute;
+                top: -66px;
+                left: 211px;
+            }
+            .content4 {
+                position: absolute;
+                left: -160px;
+                top: 200px;
+                width: 200px;
+                display: none;
+                &.active {
+                    display: block;
+                }
+                @media only screen and (max-width: 600px) {
+  left: -85px;
+  top: 184px;
+width: 200px;
+font-size: 18px;
+}
+            }
+            .arrow4 {
+                visibility: hidden;
+                position: absolute;
+                left: -10px;
+                top: 85px;
+                transform: rotate(50deg);
+                &.active {
+                    visibility: visible;
+                }
+                @media only screen and (max-width: 600px) {
+                    left: -10px;
+                    top: 57px;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        .color5 {
+            position: absolute;
+            top: 0px;
+
+            left: 410px;
+            @media only screen and (max-width: 600px) {
+                .color-image {
+                    height: 80px;
+                }
+                .color-arrow {
+                    height: 50px;
+                }
+                position: absolute;
+                top: 0px;
+                left: 265px;
+            }
+
+            .content5 {
+                position: absolute;
+                left: -240px;
+                top: 100px;
+                width: 200px;
+                display: none;
+                &.active {
+                    display: block;
+                }
+                @media only screen and (max-width: 600px) {
+   left: -159px;
+top: 105px;
+width: 200px;
+font-size: 18px;
+}
+            }
+            .arrow5 {
+                visibility: hidden;
+                position: absolute;
+                left: -34px;
+                top: 55px;
+                transform: rotate(70deg);
+                &.active {
+                    visibility: visible;
+                }
+                @media only screen and (max-width: 600px) {
+                    left: -18px;
+                    top: 41px;
+                    transform: rotate(70deg);
+                }
+            }
+        }
+        .text-content {
+            position: absolute;
+            left: 131px;
+            top: 80px;
+
+            .color-name {
+                width: 220px;
+                text-align: center;
+
+                @media only screen and (max-width: 600px) {
+                    text-align: start;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Content and Class on Click</title>
+  </head>
+  <body>
+    <h1 class="my-heading">Hey</h1>
+    <h1 class="my-heading">Hola</h1>
+    <h1 class="my-heading">Bonjour</h1>
+
+    <script>
+      const headings = document.querySelectorAll(".my-heading");
+
+      headings.forEach((heading) => {
+        heading.addEventListener("click", () => {
+          heading.textContent = "Clicked";
+          heading.classList.add("clicked");
+        });
+      });
+
+
+
+      const white = document.getElementById("whitearrow");
+const cream = document.getElementById("creamarrow");
+const blue = document.getElementById("bluearrow");
+const yellow = document.getElementById("yellowarrow");
+const transparent = document.getElementById("transparentarrow");
+const para = document.getElementById("color_intro");
+const whitepara = document.getElementById("color_white");
+const yellowpara = document.getElementById("color_yellow");
+const transparentpara= document.getElementById("color_transparent");
+const bluepara = document.getElementById("color_blue");
+const creampara = document.getElementById("color_cream");
+const whitepaths =  document.getElementById("whitepath");
+const creampath =  document.getElementById("creampath");
+const bluepath =  document.getElementById("bluepath");
+const yellowpath =  document.getElementById("yellowpath");
+const transparentpath =  document.getElementById("transparentpath");
+function yellow_arrow()
+{
+
+  yellowpath.setAttribute("stroke", "black");
+  transparentpath.setAttribute("stroke", "#C4C4C4");
+  bluepath.setAttribute("stroke", "#C4C4C4");
+   whitepaths.setAttribute("stroke", "#C4C4C4");
+    creampath.setAttribute("stroke", "#C4C4C4");
+  yellow.classList.add("color-active");
+   yellowpara.classList.add("active-one");
+     whitepara.classList.remove("active-one");
+         transparentpara.classList.remove("active-one");
+            creampara.classList.remove("active-one");
+            transparent.classList.remove("color-active");
+ bluepara.classList.remove("active-one");
+  transparentpara.classList.remove("color-active");
+ cream.classList.remove("color-active");
+white.classList.remove("color-active");
+ blue.classList.remove("color-active");
+ para.textContent = "Yellow"
+}
+function transparent_arrow(){
+   yellowpath.setAttribute("stroke", "#C4C4C4");
+  transparentpath.setAttribute("stroke", "black");
+  bluepath.setAttribute("stroke", "#C4C4C4");
+   whitepaths.setAttribute("stroke", "#C4C4C4");
+    creampath.setAttribute("stroke", "#C4C4C4");
+   yellow.classList.remove("color-active");
+  transparent.classList.add("color-active");
+ cream.classList.remove("color-active");
+white.classList.remove("color-active");
+ blue.classList.remove("color-active");
+ yellowpara.classList.remove("active-one");
+     whitepara.classList.remove("active-one");
+         transparentpara.classList.add("active-one");
+            creampara.classList.remove("active-one");
+ bluepara.classList.remove("active-one");
+  transparentpara.classList.add("color-active");
+  para.textContent = "Transparent"
+}
+function blue_arrow(){
+  yellowpath.setAttribute("stroke", "#C4C4C4");
+  transparentpath.setAttribute("stroke",  "#C4C4C4");
+  bluepath.setAttribute("stroke", "black");
+   whitepaths.setAttribute("stroke", "#C4C4C4");
+    creampath.setAttribute("stroke", "#C4C4C4");
+   yellow.classList.remove("color-active");
+  transparent.classList.remove("color-active");
+ cream.classList.remove("color-active");
+white.classList.remove("color-active");
+ blue.classList.add("color-active");
+ yellowpara.classList.remove("active-one");
+     whitepara.classList.remove("active-one");
+         transparentpara.classList.remove("active-one");
+            creampara.classList.remove("active-one");
+ bluepara.classList.add("active-one");
+  transparentpara.classList.remove("color-active");
+  para.textContent = "Blue"
+}
+
+
+function creamarrow(){
+  yellowpath.setAttribute("stroke", "#C4C4C4");
+  transparentpath.setAttribute("stroke",  "#C4C4C4");
+  bluepath.setAttribute("stroke","#C4C4C4");
+   whitepaths.setAttribute("stroke", "#C4C4C4");
+    creampath.setAttribute("stroke", "black");
+   yellow.classList.remove("color-active");
+  transparent.classList.remove("color-active");
+ cream.classList.add("color-active");
+white.classList.remove("color-active");
+ blue.classList.remove("color-active");
+ yellowpara.classList.remove("active-one");
+     whitepara.classList.remove("active-one");
+         transparentpara.classList.remove("active-one");
+            creampara.classList.add("active-one");
+ bluepara.classList.remove("active-one");
+  transparentpara.classList.remove("color-active");
+  para.textContent = "Cream"
+}
+function white_arrow(){
+   yellowpath.setAttribute("stroke", "#C4C4C4");
+  transparentpath.setAttribute("stroke",  "#C4C4C4");
+  bluepath.setAttribute("stroke","#C4C4C4");
+   whitepaths.setAttribute("stroke", "black");
+    creampath.setAttribute("stroke", "#C4C4C4");
+   yellow.classList.remove("color-active");
+  transparent.classList.remove("color-active");
+  yellowpara.classList.remove("active-one");
+     whitepara.classList.add("active-one");
+         transparentpara.classList.remove("active-one");
+            creampara.classList.remove("active-one");
+ bluepara.classList.remove("active-one");
+  transparentpara.classList.remove("color-active");
+ cream.classList.remove ("color-active");
+white.classList.add("color-active");
+ blue.classList.remove("color-active");
+  para.textContent = "White"
+}
+
+
+
+    </script>
+  </body>
+</html>
